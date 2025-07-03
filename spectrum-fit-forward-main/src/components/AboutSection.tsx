@@ -7,7 +7,7 @@ const AboutSection = () => {
             <img 
               src="/assets/about-section-image.webp"
               alt="Innovation and technology"
-              className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+              className="w-full max-h-96 object-contain rounded-3xl shadow-2xl"
             />
           </div>
           <div className="space-y-6">
