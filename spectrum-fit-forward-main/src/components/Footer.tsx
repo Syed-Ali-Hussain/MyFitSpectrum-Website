@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.instagram.com/myfitspectrum?igsh=anZxemY1Y3F2aW1m" 
+                href="https://www.instagram.com/myfitspectrum" 
                 className="w-10 h-10 bg-brand-blue hover:bg-brand-blue/80 rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Instagram"
               >
