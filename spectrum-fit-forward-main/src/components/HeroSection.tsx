@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -25,13 +24,6 @@ const HeroSection = () => {
                 Join the Waitlist
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 text-lg rounded-xl transition-all duration-300"
-              >
-                Learn More
-              </Button>
             </div>
           </div>
           <div className="relative lg:pl-12">
