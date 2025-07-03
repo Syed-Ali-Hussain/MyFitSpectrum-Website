@@ -34,11 +34,11 @@ const HeroSection = () => {
                 className="w-full h-80 object-cover rounded-2xl"
               />
               <div className="absolute -top-4 -right-4 bg-brand-teal text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                AI Powered (Updated Image)
+                AI Powered
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
-              Early Access Available (Updated Image)
+              Early Access Available
             </div>
           </div>
         </div>
