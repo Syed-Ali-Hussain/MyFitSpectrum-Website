@@ -10,7 +10,7 @@ const SignupSection = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) {
       toast({
@@ -21,33 +21,36 @@ const SignupSection = () => {
       return;
     }
 
-    // Create a temporary form to submit to Formsubmit
-    const tempForm = document.createElement("form");
-    tempForm.action = "https://formsubmit.co/hopelessdemon04@gmail.com";
-    tempForm.method = "POST";
-    tempForm.style.display = "none";
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/ih0oogeyz6tnv", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data: { name, email } }),
+      });
 
-    const nameInput = document.createElement("input");
-    nameInput.name = "name";
-    nameInput.value = name;
-    tempForm.appendChild(nameInput);
-
-    const emailInput = document.createElement("input");
-    emailInput.name = "email";
-    emailInput.value = email;
-    tempForm.appendChild(emailInput);
-
-    document.body.appendChild(tempForm);
-    tempForm.submit();
-    document.body.removeChild(tempForm);
-
-    toast({
-      title: "Form Submitted! 🎉",
-      description: "You've been added to our waitlist. Check your email for confirmation.",
-    });
-
-    setName("");
-    setEmail("");
+      if (response.ok) {
+        toast({
+          title: "Form Submitted! 🎉",
+          description: "You've been added to our waitlist.",
+        });
+        setName("");
+        setEmail("");
+      } else {
+        toast({
+          title: "Submission failed",
+          description: "There was an issue submitting the form. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network error",
+        description: "Check your internet connection and try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
