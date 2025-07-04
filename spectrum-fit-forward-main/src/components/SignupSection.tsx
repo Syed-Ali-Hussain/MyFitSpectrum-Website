@@ -10,7 +10,7 @@ const SignupSection = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) {
       toast({
@@ -20,38 +20,34 @@ const SignupSection = () => {
       });
       return;
     }
-    
-    try {
-      const response = await fetch("https://formspree.io/f/mpwrnynz", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ name, email }),
-      });
 
-      if (response.ok) {
-        toast({
-          title: "Welcome to MyFitSpectrum! 🎉",
-          description: "You've been added to our waitlist. Check your email for updates!",
-        });
-        setName("");
-        setEmail("");
-      } else {
-        toast({
-          title: "Oops!",
-          description: "Something went wrong. Please try again later.",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "Network error",
-        description: "Please check your connection and try again.",
-        variant: "destructive",
-      });
-    }
+    // Create a temporary form to submit to Formsubmit
+    const tempForm = document.createElement("form");
+    tempForm.action = "https://formsubmit.co/hopelessdemon04@gmail.com";
+    tempForm.method = "POST";
+    tempForm.style.display = "none";
+
+    const nameInput = document.createElement("input");
+    nameInput.name = "name";
+    nameInput.value = name;
+    tempForm.appendChild(nameInput);
+
+    const emailInput = document.createElement("input");
+    emailInput.name = "email";
+    emailInput.value = email;
+    tempForm.appendChild(emailInput);
+
+    document.body.appendChild(tempForm);
+    tempForm.submit();
+    document.body.removeChild(tempForm);
+
+    toast({
+      title: "Form Submitted! 🎉",
+      description: "You've been added to our waitlist. Check your email for confirmation.",
+    });
+
+    setName("");
+    setEmail("");
   };
 
   return (
