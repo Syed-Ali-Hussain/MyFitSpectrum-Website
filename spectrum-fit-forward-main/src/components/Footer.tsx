@@ -33,7 +33,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 MyFitSpectrum. All rights reserved. Built with ❤️ for the neurodiverse community.
+            © 2025 MyFitSpectrum. All rights reserved. Built with ❤️ for the neurodiverse community.
           </p>
         </div>
       </div>
