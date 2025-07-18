@@ -28,11 +28,13 @@ const HeroSection = () => {
           </div>
           <div className="relative lg:pl-12">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src="/assets/your-hero-image.webp"
-                alt="Updated MyFitSpectrum app demo"
-                className="w-full h-80 object-cover rounded-2xl"
-              />
+<div className="aspect-square w-full">
+  <img 
+    src="/assets/your-hero-image.webp"
+    alt="Updated MyFitSpectrum app demo"
+    className="object-cover w-full h-full rounded-2xl"
+  />
+</div>
               <div className="absolute -top-4 -right-4 bg-brand-teal text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                 AI Powered
               </div>
