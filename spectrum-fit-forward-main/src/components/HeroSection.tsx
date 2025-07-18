@@ -21,7 +21,7 @@ const HeroSection = () => {
                 href="#waitlist" 
                 className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center"
               >
-                Join the Waitlist
+                🔥 Get 2 Months Free Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
