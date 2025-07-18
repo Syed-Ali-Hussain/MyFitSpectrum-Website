@@ -14,8 +14,7 @@ return (
           Technology
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-          MyFitSpectrum uses AI to correct your form and recommend personalized workouts — built with neurodiverse
-          individuals in mind.
+          MyFitSpectrum uses AI to correct your form and recommend personalized workouts — Adults, teens, and even kids on the spectrum can utilize this app.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a href="#waitlist"
