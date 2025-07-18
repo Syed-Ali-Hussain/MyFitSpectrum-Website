@@ -108,7 +108,7 @@ const SignupSection = () => {
                   size="lg"
                   className="w-full bg-gradient-to-r from-brand-blue to-brand-teal hover:from-brand-blue/90 hover:to-brand-teal/90 text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Join the Waitlist
+                  🔥 Get 2 Months Free Now
                 </Button>
                 
                 <p className="text-sm text-gray-500 text-center">
